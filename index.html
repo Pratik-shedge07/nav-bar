@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #a8b4f7;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffbbbb;
+      padding: 10px 20px;
+      position: relative;
+    }
+  
+    .navbar .logo {
+      color: #fff;
+      font-size: 1.8em;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+  
+    .img {
+      width: 40px;
+      height: 30px;
+      background-color: none;
+    }
+  
+    .navbar .menu {
+      display: flex;
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      
+  
+      .navbar .logo {
+        font-size: 1.5em;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+      }
+  
+      .navbar .logo {
+        font-size: 1.7em;
+      }
+  
+      .navbar .menu {
+        display: flex;
+        gap: 25px;
+      }
+    }
+    @media (min-width: 1025px) {
+      .navbar {
+        padding: 15px 40px;
+      }
+  
+      .navbar .logo {
+        font-size: 2em;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo"> 
+      <img  class="img" src="winery.png">
+      Goa Wines
+    </div>
+    <nav class="menu">
+      <a >Home</a>
+      <a >About</a>
+      <a >Services</a>
+      <a >Contact</a>
+    </nav>
+  </header>
+
+</body>
+</html>

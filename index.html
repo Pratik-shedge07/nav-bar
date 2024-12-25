@@ -10,93 +10,110 @@
       padding: 0;
       background-color: #a8b4f7;
     }
-  
+
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #ffbbbb;
       padding: 10px 20px;
-      position: relative;
     }
-    .hamburger {
-      width: 40px;
-      height: 30px;
-      background-color: none;
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-  
-    .navbar .logo {
-      color: #fff;
-      font-size: 1.8em;
-      font-weight: bold;
-      padding-bottom: 10px;
-    }
-  
+
     .img {
       width: 40px;
       height: 30px;
-      background-color: none;
     }
-  
+
     .navbar .menu {
       display: flex;
       gap: 20px;
     }
+
+    .menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+    }
     @media (max-width: 600px) {
-      .hamburger {
-        width: 40px;
-        height: 30px;
-        background-color: none;
-  
+      .menu a {
+        display: none; /* Hides the menu on small screens */
       }
-      .navbar .logo {
+    
+      .hamburger {
+        display: block; /* Displays the hamburger menu */
+      }
+    
+
+      .logo {
         font-size: 1.5em;
       }
     }
+
     @media (min-width: 601px) and (max-width: 1024px) {
       .navbar {
-        flex-direction: row;
-        justify-content: space-between;
         padding: 10px 30px;
       }
-  
-      .navbar .logo {
-        font-size: 1.7em;
-      }
-  
-      .navbar .menu {
+
+      .menu {
         display: flex;
         gap: 25px;
       }
+
+      .logo {
+        font-size: 1.7em;
+      }
+
+      .hamburger {
+        display: none; 
+      }
     }
+
     @media (min-width: 1025px) {
       .navbar {
         padding: 15px 40px;
       }
-  
-      .navbar .logo {
+
+      .menu {
+        display: flex;
+      }
+
+      .hamburger {
+        display: none; 
+      }
+
+      .logo {
         font-size: 2em;
       }
     }
   </style>
-  
 </head>
 <body>
-
   <header class="navbar">
     <div class="logo"> 
-      <img  class="img" src="winery.png">
+      <img class="img" src="winery.png" alt="Logo">
       Goa Wines
     </div>
-    <nav class="menu">
-      <a >Home</a>
-      <a >About</a>
-      <a >Services</a>
-      <a >Contact</a>
-      <img class="hamburger" src="menus.png">
-    </nav>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+    <img class="hamburger" src="menus.png" alt="Menu">
   </header>
-
 </body>
 </html>
